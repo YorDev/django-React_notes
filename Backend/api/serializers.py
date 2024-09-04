@@ -17,4 +17,4 @@ class NoteSerializer(serializers.ModelSerializer):
         model = Note
         fields = ['id', 'title', 'content', 'created_at', 'updated_at']
         read_only_fields = ['created_at', 'updated_at']
-        extra_kwargs = {'user': {'read_only': True}}
+        extra_kwargs = {'author': {'read_only': True}}
